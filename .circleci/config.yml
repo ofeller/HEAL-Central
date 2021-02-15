@@ -14,4 +14,4 @@ jobs:
         - run:
             command: npm start
             background: true
-        - run: mocha server.test.js
+        - run: npm test
