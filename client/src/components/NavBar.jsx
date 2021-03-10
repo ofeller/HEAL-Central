@@ -14,13 +14,13 @@ class NavBar extends Component {
                     <Link to='/'> 
                         <h1 class=""> HOME </h1>
                     </Link>
-                    <Link to='/'> 
+                    <Link to='/about'> 
                         <h1 class=""> ABOUT </h1>
                     </Link>
-                    <Link to='/'> 
+                    <Link to='/calendar'> 
                         <h1 class=""> CALENDAR </h1>
                     </Link>
-                    <Link to='/'> 
+                    <Link to='/gallery'> 
                         <h1 class=""> GALLERY </h1>
                     </Link>
                     <Link to='/'> 
