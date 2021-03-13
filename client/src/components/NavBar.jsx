@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
 
-import logo from '../heal_logo.png'
+import logo from '../heal_logo.PNG'
 
 class NavBar extends Component {
     render() {
         return (
-            <div>
-                <Link to='/'>
-                    <img src={logo} class="m-auto w-48 h-48"/>
+            <div class="fixed bg-white m-auto w-full">
+                <div class="flex flex-wrap justify-around items-center">
+                    <Link to='/'>
+                        <img src={logo} class="m-auto w-20 h-20"/>
                     </Link>
-                <div class="flex justify-around">
                     <Link to='/'> 
                         <h1 class=""> HOME </h1>
                     </Link>
