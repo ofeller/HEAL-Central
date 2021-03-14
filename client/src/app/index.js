@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import { NavBar } from '../components'
-import { Home, About, Calendar, Gallery } from '../pages'
+import { Home, About, Calendar, Gallery, ExecBoard } from '../pages'
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
           <Route path="/about" exact component={About} />
           <Route path="/calendar" exact component={Calendar} />
           <Route path="/gallery" exact component={Gallery} />
+          <Route path="/execboard" exact component={ExecBoard} />
         </Switch>
       </div>
     </Router>

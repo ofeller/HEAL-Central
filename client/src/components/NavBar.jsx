@@ -25,6 +25,9 @@ class NavBar extends Component {
                     <Link to='/gallery'> 
                         <h1 class=""> GALLERY </h1>
                     </Link>
+                    <Link to='/execboard'> 
+                        <h1 class=""> EXECUTIVE BOARD </h1>
+                    </Link>
                     <Link to='/'> 
                         <h1 class=""> CONTACT </h1>
                     </Link>
