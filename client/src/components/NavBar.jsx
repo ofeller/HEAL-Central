@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
 
-import logo from '../heal_logo.PNG'
-import instagram from '../instagram_icon.png'
-import facebook from '../facebook_icon.png'
+import logo from '../images/heal_logo.png'
+import instagram from '../images/instagram_icon.png'
+import facebook from '../images/facebook_icon.png'
 
 class NavBar extends Component {
     render() {
