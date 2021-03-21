@@ -3,9 +3,13 @@ import React, { Component } from 'react'
 class Gallery extends Component {
     render() {
         return (
+            <body class ="bg-blue-200">
+
+            
             <div>
-                <p>Gallery goes here</p>
+                <h1>Gallery Page</h1>
             </div>
+            </body>
         )
     }
 }
