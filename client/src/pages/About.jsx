@@ -7,7 +7,7 @@ import prehealth from '../images/prehealth.png'
 class About extends Component {
     render() {
         return (
-            <div class="xl:bg-gray-400">
+            <div class="pt-20 xl:bg-gray-400">
                 <div class="xl:border-r-2 xl:bg-white xl:border-l-2 xl:border-b-2 p-10 m-auto xl:w-8/12">
                     <div class="m-4">
                         <div class="border-8 border-black text-center text-5xl p-6 w-9/12 xl:w-10/12 m-auto font-bold">
