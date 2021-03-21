@@ -6,7 +6,7 @@ class Home extends Component {
         return (
         
             <div>
-                <div class="bg-banner bg-cover bg-top p-24 bg-fixed">
+                <div class="pt-24 bg-banner bg-cover bg-top p-24 bg-fixed">
                 <div class="bg-teal p-4 bg-opacity-90 text-center text-white">
                      <div class="text-10xl tracking-widest font-medium">
                          HEAL

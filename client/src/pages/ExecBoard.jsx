@@ -4,7 +4,7 @@ import leadership from '../images/leadership.png'
 class ExecBoard extends Component {
     render() {
         return (
-            <div class="text-center"> 
+            <div class="pt-24 text-center"> 
                 <div class="border-8 border-black text-center text-5xl p-6 w-10/12 mb-4 m-auto font-bold">
                     <h2> Executive Board </h2>
                 </div>
