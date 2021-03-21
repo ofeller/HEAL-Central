@@ -5,7 +5,10 @@ module.exports = {
     extend: {
       backgroundImage: theme => ({
         'banner': "url('images/shands-background3.jpeg')",
-       })
+       }),
+       colors:{
+        'teal': '#85cef1',
+      }
     },
     fontSize: {
       'xs': '.75rem',
@@ -24,6 +27,7 @@ module.exports = {
       '10xl': '12rem',
 
      },
+     
      backgroundColor: theme => ({
       ...theme('colors'),
       'teal': '#85cef1',
@@ -33,6 +37,7 @@ module.exports = {
      })
   },
   variants: {
+    textColor: ['responsive', 'hover'],
     extend: {},
   },
   plugins: [],
