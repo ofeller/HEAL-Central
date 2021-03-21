@@ -4,8 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: theme => ({
-        'samplebanner': "url('images/samplebanner.jpeg')",
-        'banner': "url('images/heal-banner.jpeg')",
+        'banner': "url('images/shands-background3.jpeg')",
        })
     },
     fontSize: {
@@ -25,6 +24,13 @@ module.exports = {
       '10xl': '12rem',
 
      },
+     backgroundColor: theme => ({
+      ...theme('colors'),
+      'teal': '#85cef1',
+      'dark-teal': '#0d2f2f',
+      'peach':'#ffb9a7',
+      'light-peach':'#ffe0cf',
+     })
   },
   variants: {
     extend: {},
