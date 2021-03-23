@@ -6,15 +6,16 @@ class Home extends Component {
         return (
         
             <div>
-                <div class="pt-24 bg-banner bg-cover bg-top p-24 bg-fixed">
-                <div class="bg-teal p-4 bg-opacity-90 text-center text-white">
-                     <div class="text-10xl tracking-widest font-medium">
+                <div class="bg-white h-20"></div>
+                <div class="bg-banner bg-cover bg-top p-24 bg-fixed">
+                <div class="bg-teal bg-opacity-90 text-white text-center">
+                     <div class="text-10xl tracking-widest font-medium -mb-10">
                          HEAL
                      </div>
                      <div class="text-3xl italic tracking-widest">
                          Health Educated Asian Leaders
                      </div>
-                     <div class="text-2xl text-black font-medium tracking-wider">
+                     <div class="text-2xl text-black pb-10 font-medium tracking-wider">
                          University of Florida
                      </div>
                      </div> 
@@ -25,7 +26,7 @@ class Home extends Component {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 <div>
                 <Link to='/about'> 
-                <button class="mt-10 transition duration-400 ease-in-out bg-white hover:bg-light-peach border-8 border-black text-center text-3xl p-6 w-4/12 font-bold bg-transparent justify-center text-black font-bold py-2 px-2">
+                <button class="mt-10 transition duration-150 ease-in-out bg-white hover:bg-peach border-8 border-black text-center text-3xl p-6 w-4/12 font-bold bg-transparent justify-center text-black font-bold py-2 px-2">
                     LEARN MORE
                 </button>
                  </Link>

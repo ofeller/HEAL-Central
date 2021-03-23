@@ -34,6 +34,7 @@ module.exports = {
       'dark-teal': '#0d2f2f',
       'peach':'#ffb9a7',
       'light-peach':'#ffe0cf',
+      'mint-green':'#bae9d0'
      })
   },
   variants: {

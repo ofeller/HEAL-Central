@@ -9,9 +9,9 @@ class NavBar extends Component {
     render() {
         return (
             <div class="z-50 fixed bg-white m-auto w-full">
-                <div class="flex flex-wrap justify-around items-center">
+                <div class="flex flex-wrap justify-around items-center h-20">
                     <Link to='/'>
-                        <img src={logo} class="m-auto w-20 h-20 my-1"/>
+                        <img src={logo} class="m-auto w-20 h-15 my-1"/>
                     </Link>
                     <Link to='/'> 
                         <h1 class="hover:text-teal"> HOME </h1>
