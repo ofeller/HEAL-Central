@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import { NavBar, ScrollToTop } from '../components'
+import { NavBar, Footer, ScrollToTop } from '../components'
 import { Home, About, Calendar, Gallery, ExecBoard } from '../pages'
 
 
@@ -10,7 +10,6 @@ function App() {
     <Router>
     <ScrollToTop/>
       <NavBar />
-      <div class="">
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/about" exact component={About} />
@@ -18,7 +17,7 @@ function App() {
           <Route path="/gallery" exact component={Gallery} />
           <Route path="/execboard" exact component={ExecBoard} />
         </Switch>
-      </div>
+        <Footer/>
     </Router>
   );
 }
