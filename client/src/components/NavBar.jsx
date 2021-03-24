@@ -8,7 +8,7 @@ import facebook from '../images/facebook_icon.png'
 class NavBar extends Component {
     render() {
         return (
-            <div class="z-50 fixed bg-white m-auto w-full">
+            <div class="font-light z-50 fixed bg-white m-auto w-full">
                 <div class="flex flex-wrap justify-around items-center h-20">
                     <Link to='/'>
                         <img src={logo} class="m-auto w-20 h-15 my-1"/>
@@ -39,10 +39,6 @@ class NavBar extends Component {
                         <a href='https://www.facebook.com/healatuf' target="_blank"> 
                         <img src= {facebook} class="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 m-auto w-8 h-8 my-1 mx-2"/>
                         </a>
-           
-                        <Link to='/'> 
-                            <h1 class=""> SOCIAL#3 </h1>
-                        </Link>
                     </div>
                 </div>
             </div>
