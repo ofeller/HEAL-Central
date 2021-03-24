@@ -26,7 +26,7 @@ export default function BackToTop() {
   }, []);
 
   return (
-    <div class="">
+    <div class="font-semibold text-sm hover:text-teal">
       {isVisible && 
         <div onClick={backToTop}>
           <h2>Back To Top </h2>
