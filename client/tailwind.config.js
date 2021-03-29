@@ -38,6 +38,7 @@ module.exports = {
       'dark-teal': '#0d2f2f',
       'peach':'#ffb9a7',
       'light-peach':'#ffe0cf',
+      'very-light-peach':'#fef1ed',
       'mint-green':'#bae9d0'
      })
   },

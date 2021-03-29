@@ -4,7 +4,7 @@ import ohana from '../images/ohana.jpg'
 class Gallery extends Component {
     render() {
         return (
-            <div class="bg-gradient-to-tl from-light-peach to-teal h-auto p-28">
+            <div class="xl:bg-gradient-to-tl from-light-peach to-teal h-auto p-28">
                 <div class=" text-5xl p-6 w-10/12 mb-4 m-auto font-bold">
                     <h2 class="italic tracking-wider "> GALLERY </h2>
                 </div>
