@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
 import image1 from '../images/heal_image1.jpg'
-import image2 from '../images/heal_image2.jpg'
+import image2 from '../images/heal_image2.jpeg'
 import image3 from '../images/heal_image3.jpg'
 import image4 from '../images/heal_image4.jpg'
 import image5 from '../images/heal_image5.jpg'
-import service from '../images/service.jpg'
-import leadership from '../images/leadership.png'
+import image6 from '../images/heal_image6.jpeg'
+import image9 from '../images/heal_image9.jpg'
+import image10 from '../images/heal_image10.jpeg'
+import image11 from '../images/heal_image11.jpeg'
+import image12 from '../images/heal_image12.jpeg'
 import ohana from '../images/ohana.jpg'
 import prehealth from '../images/prehealth.png'
 
@@ -41,21 +44,28 @@ class Home extends Component {
                         </Link>
                     </div>
                 </div>
-                <div class=" p-8 grid grid-flow-row grid-cols-3 justify-center px-4">
+                <div class=" p-8 grid grid-flow-row grid-cols-4 justify-center px-0">
                 <div class="">
-                    <img src={leadership} class=""/>
-                    <img src={ohana}/>  
-                    <img src={image4}/>                 
+                    <img src={image9} class=""/>
+                    <img src={image6}/>  
+                         
                 </div>
                 <div class="">
                     <img src={image3}/>
-                    <img src={image1}/>          
-                    <img src={image5}/>                   
+                    <img src={image10}/>          
+                                 
+                </div>
+                <div>
+                <img src={image11} class="w-full"/>
+                <img src={prehealth}/>
+         
                 </div>
                 <div>
                 <img src={image2} class="w-full"/>
-                <img src={prehealth}/>
+                <img src={image12}/>
+         
                 </div>
+               
                
                
                
