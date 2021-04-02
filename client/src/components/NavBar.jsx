@@ -31,6 +31,9 @@ class NavBar extends Component {
                     <Link to='/'> 
                         <h1 class="hover:text-teal"> CONTACT </h1>
                     </Link>
+                    <Link to='/attendees/list'> 
+                        <h1 class="hover:text-teal"> ATTENDEES LIST </h1>
+                    </Link>
                     <div class="flex items-center">
                         <a href='https://www.instagram.com/ufheal/' target="_blank"> 
                         <img src= {instagram} class="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 m-auto w-8 h-8 my-1 mx-2"/>
