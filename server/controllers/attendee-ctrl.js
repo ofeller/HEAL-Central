@@ -52,7 +52,7 @@ updateAttendee = async (req, res) => {
         }
         attendee.first_name = body.first_name
         attendee.last_name = body.last_name
-        attendee.ufl_email = body.ufl_email
+        attendee.email = body.email
         attendee
             .save()
             .then(() => {
