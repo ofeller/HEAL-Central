@@ -1,17 +1,21 @@
 import React, { Component } from 'react'
 import api from '../api'
 
-
-
 class AttendeesInsert extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
+            heal_event: '',
             first_name: '',
             last_name: '',
             email: '',
         }
+    }
+
+    handleChangeInputHealEvent = async event => {
+        const heal_event = event.target.value
+        this.setState({ heal_event })
     }
 
     handleChangeInputFirstName = async event => {
@@ -30,12 +34,13 @@ class AttendeesInsert extends Component {
     }
 
     handleIncludeAttendee = async () => {
-        const { first_name, last_name, email } = this.state
-        const payload = { first_name, last_name, email }
+        const { heal_event, first_name, last_name, email } = this.state
+        const payload = { heal_event, first_name, last_name, email }
 
         await api.insertAttendee(payload).then(res => {
-            window.alert(`Attendee confirmed successfully`)
+            window.alert(`Attendance confirmed successfully`)
             this.setState({
+                heal_event: '',
                 first_name: '',
                 last_name: '',
                 email: '',
@@ -44,13 +49,22 @@ class AttendeesInsert extends Component {
     }
 
     render() {
-        const { first_name, last_name, email } = this.state
+        const { heal_event, first_name, last_name, email } = this.state
         return (
-            <form onSubmit={this.handleIncludeAttendee}>
-                <h2>Sign up for event </h2>
+            <form className="flex flex-col m-auto w-5/12 pb-4" onSubmit={this.handleIncludeAttendee}>
+                <h2 className="text-center">Sign Up for an Event </h2>
+
+                <label>Event: </label>
+                <input
+                    className="border rounded"
+                    type="text"
+                    value={heal_event}
+                    onChange={this.handleChangeInputHealEvent}
+                />
 
                 <label>First Name: </label>
                 <input
+                    className="border rounded"
                     type="text"
                     value={first_name}
                     onChange={this.handleChangeInputFirstName}
@@ -58,6 +72,7 @@ class AttendeesInsert extends Component {
 
                 <label>Last Name: </label>
                 <input
+                    className="border rounded"
                     type="text"
                     value={last_name}
                     onChange={this.handleChangeInputLastName}
@@ -65,6 +80,7 @@ class AttendeesInsert extends Component {
 
                 <label>Email: </label>
                 <input
+                    className="border rounded"
                     type="text"
                     value={email}
                     onChange={this.handleChangeInputEmail}
