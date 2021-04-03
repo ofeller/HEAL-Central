@@ -16,6 +16,8 @@ function App() {
           <Route path="/gallery" exact component={Gallery} />
           <Route path="/execboard" exact component={ExecBoard} />
           <Route path="/attendees/list" exact component={AttendeesList}/>
+          <Route path="/attendees/create" exact component={AttendeesInsert}/>
+          <Route path="/attendees/update/:id" exact component={AttendeesUpdate}/>
         </Switch>
         <Footer/>
     </Router>
