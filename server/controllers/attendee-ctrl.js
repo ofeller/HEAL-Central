@@ -50,6 +50,7 @@ updateAttendee = async (req, res) => {
                 message: 'Attendee not found!',
             })
         }
+        attendee.heal_event = body.heal_event
         attendee.first_name = body.first_name
         attendee.last_name = body.last_name
         attendee.email = body.email
