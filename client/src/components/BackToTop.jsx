@@ -26,7 +26,7 @@ export default function BackToTop() {
   }, []);
 
   return (
-    <div class="font-semibold text-sm hover:text-teal cursor-pointer">
+    <div className="font-semibold text-sm hover:text-teal cursor-pointer">
       {isVisible && 
         <div onClick={backToTop}>
           <h2>Back To Top </h2>
