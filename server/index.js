@@ -1,3 +1,4 @@
+
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
@@ -21,3 +22,5 @@ app.get('/', (req, res) => {
 app.use('/api', attendeeRouter)
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
+
+module.exports = app.listen(3000);
