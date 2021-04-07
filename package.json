@@ -4,8 +4,8 @@
   "description": "Testing Practice",
   "main": "server.js",
   "scripts": {
-    "test": "mocha server.test.js",
-    "start": "node server.js"
+    "test": "mocha",
+    "start": "node index.js"
   },
   "author": "Medhir Bhargava & Alex Webber",
   "license": "MIT",
