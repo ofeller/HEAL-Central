@@ -9,6 +9,8 @@ jobs:
           
       steps:
         - run: ls
+        - run: cd ..
+        - run: cd server
         - run: npm run
         - run: npm install
         - run: npm install mocha
