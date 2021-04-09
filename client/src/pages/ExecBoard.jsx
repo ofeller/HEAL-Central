@@ -5,11 +5,11 @@ import profilePic from '../images/profile-icon.png'
 class ExecBoard extends Component {
     render() {
         return (
-            <div className="pt-24 text-center"> 
-                <div className="border-8 border-black text-center text-5xl p-6 w-10/12 mb-4 m-auto font-bold">
-                    <h2> Executive Board </h2>
+            <div className="pt-28 text-center"> 
+                <div className="mt-6 border-8 border-gray-800 tracking-wider text-gray-800 italic text-center text-5xl p-6 w-7/12 my-8  m-auto font-bold">
+                    <h2>EXECUTIVE BOARD</h2>
                 </div>
-                <div className="grid grid-cols-3 gap-8 m-auto w-5/6">
+                <div className="grid grid-cols-3 gap-8 m-auto w-5/6 pt-4">
                     <div>
                         <img src={profilePic} alt="profilePic" class ="border-black-300 m-auto"/>
                         <h2 className="text-blue-600 font-bold">Name</h2>
