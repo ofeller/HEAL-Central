@@ -2,19 +2,18 @@
 version: 2.1
 # Orchestrate or schedule a set of jobs
 jobs:
-  build:
-    working_directory: ~/server
-    docker:
-      - image: circleci/node:current
-        
-    steps:
-      - checkout:
-        path: ~HEAL-Central/server
+    build:
+      working_directory: ~/server
+      docker:
+        - image: circleci/node:current
           
-        
-      - run: npm install
-      - run: npm install mocha
-      - run:
-          command: npm start
-          background: true
-      - run: npm test
+      steps:
+        - checkout:
+            path: ~HEAL-Central/server
+          
+        - run: npm install
+        - run: npm install mocha
+        - run:
+            command: npm start
+            background: true
+        - run: npm test
