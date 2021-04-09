@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom';
-
+import {Link} from 'react-router-dom'
+import ToBottom from './ToBottom'
 import logo from '../images/heal_logo.png'
 import instagram from '../images/instagram_icon.png'
 import facebook from '../images/facebook_icon.png'
@@ -8,6 +8,7 @@ import facebook from '../images/facebook_icon.png'
 class NavBar extends Component {
     render() {
         return (
+            <React.Fragment>
             <div className="font-light z-50 fixed bg-white m-auto w-full">
                 <div className="flex flex-wrap justify-around items-center h-20">
                     <Link to='/'>
@@ -28,12 +29,11 @@ class NavBar extends Component {
                     <Link to='/execboard'> 
                         <h1 className="hover:text-teal"> EXECUTIVE BOARD </h1>
                     </Link>
-                    <Link to='/'> 
-                        <h1 className="hover:text-teal"> CONTACT </h1>
-                    </Link>
+                        <h1 className="cursor-pointer hover:text-teal"> <ToBottom/> </h1> 
                     <Link to='/attendees/list'> 
                         <h1 className="hover:text-teal"> ATTENDEES LIST </h1>
                     </Link>
+
                     <div className="flex items-center">
                         <a href='https://www.instagram.com/ufheal/' target="_blank"> 
                         <img src= {instagram} className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 m-auto w-8 h-8 my-1 mx-2"/>
@@ -45,6 +45,7 @@ class NavBar extends Component {
                     </div>
                 </div>
             </div>
+            </React.Fragment>
         )
     }
 }
