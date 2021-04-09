@@ -8,7 +8,7 @@ jobs:
         - image: circleci/node:current
           
       steps:
-        - run: cd server
+        - run: cd test
         - run: npm install
         - run: npm install mocha
         - run:
