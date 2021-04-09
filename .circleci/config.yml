@@ -8,12 +8,9 @@ jobs:
         - image: circleci/node:current
           
       steps:
-        - checkout:
-            path: ~HEAL-Central/server
-          
         - run: npm install
         - run: npm install mocha
         - run:
-            command: node index.js
+            command: npm start
             background: true
-        - run: mocha
+        - run: npm test
