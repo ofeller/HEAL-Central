@@ -13,14 +13,6 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 app.use(express.json())
 
-db.on('error', console.error.bind(console, 'MongoDB connection error:'))
-
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
-
-app.use('/api', attendeeRouter)
-
 // Specification for http server
 var http = require('http'), 
 	fs = require('fs'), 
@@ -69,6 +61,16 @@ fs.readFile('listings.json', 'utf8', function(err, data) {
 	});
    
 });
+
+
+db.on('error', console.error.bind(console, 'MongoDB connection error:'))
+
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+})
+
+app.use('/api', attendeeRouter)
+
 
 if(!module.parent){
     app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
