@@ -10,6 +10,8 @@ jobs:
           # Mongo connection info in Platform.sh format
         - image: mongo:3.4.24
           command: [--auth]
+        - image: mongo:3.4.24
+          command: mongo 127.0.0.1:27017:3000
       steps:
       - checkout
       - run:
