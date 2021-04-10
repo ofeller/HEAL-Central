@@ -54,7 +54,8 @@ jobs:
           command: |
             cd server
             ps aux | grep node
-            kill -9 node
+            kill -9 199
+            kill -9 201
             sudo npm start
           background: true
       - run: 
