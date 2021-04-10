@@ -12,7 +12,6 @@ jobs:
           command: [--auth]
         - image: mongo:3.4.24
           command: |
-            [--auth]
             mongo
             use signup
             db.createUser(
