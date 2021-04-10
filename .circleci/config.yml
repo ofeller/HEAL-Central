@@ -53,6 +53,7 @@ jobs:
           name: Start Server
           command: |
             cd server
+            sudo service mongodb start
             npm start
           background: true
       - run: 
