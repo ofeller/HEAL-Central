@@ -53,6 +53,8 @@ jobs:
           name: Start Server
           command: |
             cd server
+            sudo lsof -i :3000
+            kill -9 {PID}
             npm start
           background: true
       - run: 
