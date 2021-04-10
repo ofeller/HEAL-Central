@@ -54,7 +54,7 @@ jobs:
           command: |
             cd server
             npm install lsof
-            kill $(lsof -t -i:3000)
+            sudo kill $(lsof -t -i:3000)
             sudo npm start
           background: true
       - run: 
