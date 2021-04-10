@@ -13,6 +13,16 @@ jobs:
         - image: mongo:3.4.24
           command: |
             mongo
+            use admin
+            db.createUser(
+              {
+                user: "myUserAdmin",
+                pwd: "abc123",
+                roles: [ { role: "userAdminAnyDatabase", db: "signup"}]
+              }
+            )
+            db.auth("myUserAdmin", "abc123")
+            db.grantRolesToUser("MyUserAdmin",[{ role: "read", db: "signup"}])
             quit()
       steps:
       - checkout
