@@ -9,10 +9,9 @@ jobs:
           environment:
           # Mongo connection info in Platform.sh format
         - image: mongo:3.4.24
-          command: [--auth]
-        - image: mongo:3.4.24
-          command: |
-            mongo
+          command: | 
+            mongod --port 3000 --dbpath /data/db1 
+            mongo --port 3000
             use signup
             db.createUser(
             {
@@ -21,9 +20,10 @@ jobs:
               roles: [ { role: "userAdminAnyDatabase", db: "signup"}]
               }
             )
+            quit()
+            mongod --auth --port 27017 --dbpath /data/db1
             db.auth("myUserAdmin", "abc123")
             db.grantRolesToUser("MyUserAdmin",[{ role: "read", db: "signup"}])
-            quit()
       steps:
       - checkout
       - run:
