@@ -72,7 +72,7 @@ app.get('/', (req, res) => {
 app.use('/api', attendeeRouter)
 
 
-if(!module.parent){
+/*if(!module.parent){
     app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
-}
+}*/
 module.exports = app.listen(3000);
