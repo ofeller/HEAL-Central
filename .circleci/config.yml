@@ -13,7 +13,7 @@ jobs:
         - image: mongo:3.4.24
           command: |
             mongo
-            use admin
+            use signup
             db.createUser(
               {
                 user: "myUserAdmin",
