@@ -36,7 +36,6 @@ jobs:
             npm install lsof
             sudo pkill node
             sudo npm start
-          background: true
       - run: 
           name: Run Server Tests
           command: |
