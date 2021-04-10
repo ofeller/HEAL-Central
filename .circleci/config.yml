@@ -12,12 +12,10 @@ jobs:
           command: [--auth]
         - image: mongo:3.4.24
           command: |
-            mongo 127.0.0.1:27017/signup
+            mongo
             use signup
-            'db.createUser({ user: "admin", pwd: "password", roles: [{ role: "userAdminAnyDatabase", db: "signup" }]})'
-            exit
-            mongo 127.0.0.1:27017/signup
-            mongo --port 3000 -u "admin" -p "password" --authenticationDatabase signup
+            show collections
+            db.attendees.find()
       steps:
       - checkout
       - run:
