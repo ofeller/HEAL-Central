@@ -53,6 +53,8 @@ jobs:
           name: Start Server
           command: |
             cd server
+            ps aux | grep node
+            killall -9 node
             sudo npm start
           background: true
       - run: 
