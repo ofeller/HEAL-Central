@@ -33,8 +33,6 @@ jobs:
           name: Start Server
           command: |
             cd server
-            npm install lsof
-            sudo pkill node
             sudo npm start
           background: true
       - run: 
