@@ -13,6 +13,14 @@ jobs:
         - image: mongo:3.4.24
           command: |
             mongo
+            use admin
+            db.createUser(
+              {
+                user: 'admin',
+                pwd: '123',
+                roles: [ { role: 'root', db: 'admin' } ]
+              }
+              );
             quit()
       steps:
       - checkout
