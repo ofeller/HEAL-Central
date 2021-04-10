@@ -44,8 +44,7 @@ jobs:
             echo 'Passed:  sudo apt-get install mongodb'
             sudo apt-get install -y mongodb
             echo 'Passed:  sudo apt-get install -y mongodb'
-            sudo apt-get install -y mongodb-org
-            echo 'Passed: sudo apt-get install -y mongodb-org'
+            # Replaced sudo apt-get install -y mongodb-org with above command
             sudo service mongodb start
           background: true
       - run: 
