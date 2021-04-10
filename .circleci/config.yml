@@ -10,8 +10,10 @@ jobs:
           # Mongo connection info in Platform.sh format
         - image: mongo:3.4.24
           command: | 
-            mongod --port 3000 --dbpath /data/db1 
+            mongod --port 3000 --dbpath=/data/db1 
+            echo "Passed first"
             mongo --port 3000
+             echo "Passed second"
             use signup
             db.createUser( { user: "myUserAdmin", pwd: "abc123", roles: [ { role: "userAdminAnyDatabase", db: "signup"} ] } )
             quit()
