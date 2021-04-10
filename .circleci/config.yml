@@ -9,11 +9,9 @@ jobs:
           environment:
           # Mongo connection info in Platform.sh format
         - image: mongo:3.4.24
-          command: |
-            [--auth]
+          command: [--auth]
         - image: mongo:3.4.24
-          command: |
-            mongo
+          command: mongo
       steps:
       - checkout
       - run:
