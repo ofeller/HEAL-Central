@@ -34,6 +34,7 @@ jobs:
       - run:  npm install chai-http
       - run:  npm install mongoose
       - run:
+          name: Installing MongoDB
           command: |
             cd server
             sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
@@ -41,6 +42,11 @@ jobs:
             sudo apt-get install mongodb
             sudo apt-get install -y mongodb-org
             sudo service mongodb start
-            npm start
           background: true
-      - run: npm test
+      - run: 
+          name: Start Server
+          command: npm start
+          background: true
+      - run: 
+          name: Run Server Tests
+          command: npm test
