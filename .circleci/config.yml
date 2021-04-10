@@ -13,9 +13,6 @@ jobs:
         - image: mongo:3.4.24
           command: |
             mongo
-            use admin
-            show collections
-            db.attendees.find()
       steps:
       - checkout
       - run:
@@ -24,7 +21,7 @@ jobs:
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
       - run:
-          name: The First Step
+          name: Installing packages
           command: |
             ls -al
             echo 'That should look familiar'
@@ -35,25 +32,11 @@ jobs:
       - run:  npm install chai
       - run:  npm install chai-http
       - run:  npm install mongoose
-      - run:
-          name: Installing MongoDB
-          command: |
-            # cd server
-            #sudo apt purge mongod* 
-            #sudo apt purge mongodb*
-            #wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
-            #sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-            #echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
-            #sudo apt-get update
-            #mongo admin --eval 'db.createUser({ user: "admin", pwd: "admin", roles: [{ role: "userAdminAnyDatabase", db: "signup" }]})'
-            #mongo main -uadmin -padmin --authenticationDatabase admin --eval 'db.createUser({ user: "main", pwd: "main", roles: [{ role: "dbOwner", db: "signup" }]})'
       - run: 
           name: Start Server
           command: |
             cd server
-            npm install lsof
-            sudo pkill node
-            sudo npm start
+            npm start
           background: true
       - run: 
           name: Run Server Tests

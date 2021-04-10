@@ -6,29 +6,83 @@ let chaiHttp = require("chai-http");
 chai.should();
 chai.use(chaiHttp);
 
-describe('Attendees APIs', () => {
+const { assert } = require('console');
+var should = require('should'), 
+fs = require('fs'),
+request = require('request');
 
-    describe("Test GET route /api/attendees", () => {
-        it("It should return all attendees", (done) => {
-            chai.request(server)
-                .get("/api/attendees")
-                .end((err, response) => {
-                    response.should.have.status(200);
-                done();
-                });
-        });
- 
-        it("It should NOT return all the attendees", (done) => {
-            chai.request(server)
-                .get("/api/attendee")
-                .end((err, response) => {
-                    response.should.have.status(404);
-                done();
-                });
-        });
+//Globals
+var attendees;
 
+describe('Attendees APIs', function() {
+
+    before(function(done) {
+        fs.readFile('attendees.json', 'utf8', function(err, data) {
+          attendees = JSON.parse(data);
+    
+          /*
+            Calling done() will pass code execution to the next appropriate block of code. 
+            In this case, execution will pass to the first it() statement.  
+           */
+          done();
+        });
     });
 
-
-
+    describe('Server responds to requests', function() {
+        it('should respond', function(done) {
+          /*
+            The request module allows us to make HTTP requests. This module could also be useful in 
+            making API calls to web services you make use of in your application, such as Google Maps. 
+           */
+          request.get('http://localhost:3000', function(error, response, body) {
+            /*
+              The 'should' module is an assertion library. Assertions allow us to compare the functions
+              that we are testing to the values we expect to receive back. 
+              
+              In this unit test we are only testing the existence of a response, and are not concerned 
+              with what is contained in the response. We can view this as a very general, binary check, not specific. 
+              
+              In first statement, assert what we should not see
+              In the second, assert what we should  see.
+              Finally, call "done();" to move on to the next test.
+            */
+            should.exist(response)
+           done();
+             
+          });
+        });
+      });
+    
+    
+        // In these tests, we will be checking more specific content using object and primitive comparisons that have specific values.
+      describe('Server provides attendees data as JSON on proper request', function() {
+        it('responds correctly to a GET request to "api/attendees"', function(done) {
+          request.get('http://localhost:3000/api/attendees', function(error, response, body) {
+              
+              // First let's assert that the body being passed by the get request actually exists or not with our general assertions, similar to the previous test:
+               should.exist(body)
+    
+                // Next, use deepEquals() for object level comparison. We want to assert that the "attendees" JSON provided by the get request is the same as the JSON file provided by the test (bodyData)
+                // Finally, call "done();" to move onto the next test
+                bodyData = JSON.parse(body);
+              should.deepEqual(attendees,bodyData);
+              done();
+                
+          });
+        });
+    
+        // For the last test, let's use make primitive value comparisons
+        it('responds with a 404 error to other GET requests', function(done) {
+          request.get('http://localhost:3000/pizza', function(error, response, body) {
+              // First, assert that the status code is what it's supposed to be (exactly 404) if the listing were missing.
+           should.deepEqual(response.statusCode,404)
+           should.equal(response.statusMessage, 'Not Found')        
+            // For the last assertion, check that the string output is the same message server.js outputs when a listing is missing:
+            // Finally, call "done();" to finish!
+    
+            done();        
+    
+          });
+        });
+      });
 });
