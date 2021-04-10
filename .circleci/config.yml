@@ -53,9 +53,8 @@ jobs:
           name: Start Server
           command: |
             cd server
-            ps aux | grep node
-            kill -9 199
-            kill -9 201
+            npm install lsof
+            kill $(lsof -t -i:3000)
             sudo npm start
           background: true
       - run: 
