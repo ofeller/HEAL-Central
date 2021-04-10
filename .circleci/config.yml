@@ -21,6 +21,10 @@ jobs:
       - run: npm install
       - run: npm install mocha
       - run:  npm install express
+      - run:  npm install cors
+      - run:  npm install chai
+      - run:  npm install chai-http
+      - run:  npm install mongoose
       - run:
           command: |
             cd server
