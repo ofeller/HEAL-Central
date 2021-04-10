@@ -42,6 +42,9 @@ jobs:
             echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
             sudo apt-get update
             echo "Passed apt-get update"
+            sudo apt install libcurl3
+            sudo apt-get install mongodb
+            echo 'Passed: sudo apt-get install mongodb'
             sudo apt-get install -y mongodb-org
             echo 'Passed: sudo apt-get install -y mongodb-org'
             sudo service mongodb start
