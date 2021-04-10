@@ -11,6 +11,8 @@ jobs:
         - image: mongo:3.4.24
           command: |
             [--auth]
+        - image: mongo:3.4.24
+          command: |
             mongo
       steps:
       - checkout
