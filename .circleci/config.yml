@@ -20,9 +20,9 @@ jobs:
             echo 'That should look familiar'
       - run: npm install
       - run: npm install mocha
+      - run:  npm install express
       - run:
           command: |
-            npm install express
             cd server
             npm start
           background: true
