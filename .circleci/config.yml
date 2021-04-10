@@ -6,11 +6,13 @@ jobs:
       working_directory: ~/server
       docker:
         - image: circleci/node:current
-          
       steps:
-        - run: ls
-        - run: cd ..
-        - run: cd server
+        - checkout
+        - run:
+          name: Code Has Arrived
+          command: |
+            ls -al
+            echo '^^^That should look familiar^^^'
         - run: npm run
         - run: npm install
         - run: npm install mocha
