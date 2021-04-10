@@ -54,7 +54,9 @@ jobs:
           command: |
             cd server
             sudo apt-get install lsof
+            echo "passed installation"
             sudo lsof -i :3000
+            echo "passed :3000"
             kill -9 PID
             npm start
           background: true
