@@ -7,16 +7,15 @@ jobs:
       docker:
         - image: circleci/node:current
       steps:
-        - checkout
-        - run:
-          name: Code Has Arrived
+      - checkout
+      - run:
+          name: The First Step
           command: |
-            ls -al
-            echo '^^^That should look familiar^^^'
-        - run: npm run
-        - run: npm install
-        - run: npm install mocha
-        - run:
-            command: npm start
-            background: true
-        - run: npm test
+            echo 'Hello World!'
+            echo 'This is the delivery pipeline'
+      - run: npm install
+      - run: npm install mocha
+      - run:
+          command: npm start
+          background: true
+      - run: npm test
