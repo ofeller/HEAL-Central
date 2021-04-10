@@ -13,7 +13,7 @@ jobs:
             mongod --port 3000 --dbpath /data/db1 
             mongo --port 3000
             use signup
-            db.createUser({ user: "myUserAdmin", pwd: "abc123", roles: [ { role: "userAdminAnyDatabase", db: "signup"}] } )
+            db.createUser( { user: "myUserAdmin", pwd: "abc123", roles: [ { role: "userAdminAnyDatabase", db: "signup"} ] } )
             quit()
             mongod --auth --port 27017 --dbpath /data/db1
             db.auth("myUserAdmin", "abc123")
