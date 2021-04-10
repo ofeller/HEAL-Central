@@ -9,16 +9,15 @@ jobs:
           environment:
           # Mongo connection info in Platform.sh format
         - image: mongo:3.4.24
-          command: [--auth]
-        - image: mongo:3.4.24
           command: |
+            [--auth]
             mongo
             use signup
             db.createUser(
-              {
-                user: "myUserAdmin",
-                pwd: "abc123",
-                roles: [ { role: "userAdminAnyDatabase", db: "signup"}]
+            {
+              user: "myUserAdmin",
+              pwd: "abc123",
+              roles: [ { role: "userAdminAnyDatabase", db: "signup"}]
               }
             )
             db.auth("myUserAdmin", "abc123")
