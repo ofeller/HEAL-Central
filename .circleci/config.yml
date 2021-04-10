@@ -38,3 +38,4 @@ jobs:
           command: |
             cd server
             npm test
+          when: on_success
