@@ -37,15 +37,11 @@ jobs:
           name: Start Server
           command: |
             cd server
-            npm install lsof
-            sudo pkill node
             sudo npm start
           background: true
       - run: 
           name: Run Server Tests
           command: |
             cd server
-            npm install lsof
-            sudo pkill node
             npm test
           when: on_success
