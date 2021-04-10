@@ -10,10 +10,6 @@ jobs:
           # Mongo connection info in Platform.sh format
         - image: mongo:3.4.24
           command: [--auth]
-        - image: mongo:3.4.24
-          command: |
-            mongo
-            quit()
       steps:
       - checkout
       - run:
@@ -38,15 +34,14 @@ jobs:
           command: |
             cd server
             sudo apt-get purge mongo*
-            wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
-            echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.4.list
+            sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+            echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
             sudo apt-get update
-            echo "Passed apt-get update"
-            sudo apt-get install mongodb
-            echo "Passed apt-get install mongodb"
-            mongo --version
-            sudo service mongodb start
-          background: true
+            sudo apt-get install -y --force-yes mongodb-org-shell
+      - run:
+          command: |
+            mongo admin --eval 'db.createUser({ user: "admin", pwd: "admin", roles: [{ role: "userAdminAnyDatabase", db: "signup" }]})'
+            mongo main -uadmin -padmin --authenticationDatabase admin --eval 'db.createUser({ user: "main", pwd: "main", roles: [{ role: "dbOwner", db: "signup" }]})'
       - run: 
           name: Start Server
           command: |
