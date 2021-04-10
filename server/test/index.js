@@ -53,24 +53,6 @@ describe('Attendees APIs', function() {
         });
       });
     
-    
-        // In these tests, we will be checking more specific content using object and primitive comparisons that have specific values.
-      describe('Server provides attendees data as JSON on proper request', function() {
-        it('responds correctly to a GET request to "api/attendees"', function(done) {
-          request.get('http://localhost:3000/api/attendees', function(error, response, body) {
-              
-              // First let's assert that the body being passed by the get request actually exists or not with our general assertions, similar to the previous test:
-               should.exist(body)
-    
-                // Next, use deepEquals() for object level comparison. We want to assert that the "attendees" JSON provided by the get request is the same as the JSON file provided by the test (bodyData)
-                // Finally, call "done();" to move onto the next test
-                bodyData = JSON.parse(body);
-              should.deepEqual(attendees,bodyData);
-              done();
-                
-          });
-        });
-    
         // For the last test, let's use make primitive value comparisons
         it('responds with a 404 error to other GET requests', function(done) {
           request.get('http://localhost:3000/pizza', function(error, response, body) {
@@ -84,5 +66,4 @@ describe('Attendees APIs', function() {
     
           });
         });
-      });
-});
+    });
