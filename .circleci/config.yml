@@ -6,10 +6,6 @@ jobs:
       working_directory: ~/server
       docker:
         - image: circleci/node:current
-        - image: mongo:3.4.24
-          command: [--auth]
-        - image: mongo:3.4.24
-          command: mongo
       steps:
       - checkout
       - run:
