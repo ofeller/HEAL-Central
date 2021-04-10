@@ -12,7 +12,7 @@ jobs:
           command: [--auth]
         - image: mongo:3.4.24
           command: |
-            mongo
+            mongo -u root -p password
             use signup
             show collections
             db.attendees.find()
