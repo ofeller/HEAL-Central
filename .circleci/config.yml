@@ -37,5 +37,7 @@ jobs:
           name: Run Server Tests
           command: |
             cd server
+            npm install lsof
+            sudo pkill node
             npm test
           when: on_success
