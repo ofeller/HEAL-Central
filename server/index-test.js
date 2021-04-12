@@ -24,8 +24,10 @@ describe('UF Directory Server Unit Tests', function() {
         The request module allows us to make HTTP requests. This module could also be useful in 
         making API calls to web services you make use of in your application, such as Google Maps. 
        */
+      console.log("here");
       request.get('http://localhost:3000', function(error, response, body) {
-        /*
+        console.log("over here");  
+      /*
           The 'should' module is an assertion library. Assertions allow us to compare the functions
           that we are testing to the values we expect to receive back. 
           
@@ -36,7 +38,8 @@ describe('UF Directory Server Unit Tests', function() {
           In the second, assert what we should  see.
           Finally, call "done();" to move on to the next test.
         */
-        should.exist(body)
+        should.exist(body);
+        console.log(body);
        done();
          
       });
