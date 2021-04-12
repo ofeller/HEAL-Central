@@ -36,7 +36,7 @@ describe('UF Directory Server Unit Tests', function() {
           In the second, assert what we should  see.
           Finally, call "done();" to move on to the next test.
         */
-        should.exist(response)
+        should.exist(body)
        done();
          
       });
