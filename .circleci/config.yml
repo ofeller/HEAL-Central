@@ -38,7 +38,6 @@ jobs:
           command: |
             ls
             cd server
-            sudo npm i -g npx
             sudo npm i kill-port
             sudo npx kill-port 3001
             sudo npm start
