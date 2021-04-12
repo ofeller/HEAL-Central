@@ -22,7 +22,6 @@ app.get('/', (req, res) => {
 
 app.use('/api', attendeeRouter)
 
-
-    app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
+app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
 
 //module.exports = app.listen(3000);
