@@ -37,7 +37,7 @@ jobs:
           name: Start Server
           command: |
             cd server
-            npm install ws@3.3.2 --save-dev --save-exact
+            npm cache clean --force or sudo npm cache clean --force
             sudo npm start
           background: true
       - run: 
