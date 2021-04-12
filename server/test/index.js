@@ -1,4 +1,4 @@
-let server = require("../index")
+//let server = require("../index")
 let chai = require("chai");
 let chaiHttp = require("chai-http");
 
