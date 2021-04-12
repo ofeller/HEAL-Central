@@ -36,6 +36,7 @@ jobs:
       - run: 
           name: Start Server
           command: |
+            ls
             cd server
             sudo npm start
           background: true
