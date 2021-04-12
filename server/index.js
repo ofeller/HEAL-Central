@@ -20,7 +20,9 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
+
 app.use('/api', attendeeRouter)
+
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
 
