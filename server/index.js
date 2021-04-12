@@ -7,7 +7,7 @@ const db = require('./db')
 const attendeeRouter = require('./routes/attendee-router')
 
 const app = express()
-const apiPort = 3000
+const apiPort = 3001
 
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
@@ -25,4 +25,4 @@ app.use('/api', attendeeRouter)
 if(!module.parent){
     app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
 }
-module.exports = app.listen(3000);
+module.exports = app.listen(3001);
