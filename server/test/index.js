@@ -23,7 +23,7 @@ describe('UF Directory Server Unit Tests', function() {
 
   /*
     This before hook loads the JSON data to the listings variable, so that we can compare 
-    the response to 'http://localhost:8080/listings' to the data we expect to recieve. 
+    the response to 'http://localhost:3000/listings' to the data we expect to recieve. 
    */
   before(function(done) {
     fs.readFile('listings.json', 'utf8', function(err, data) {
@@ -43,7 +43,7 @@ describe('UF Directory Server Unit Tests', function() {
         The request module allows us to make HTTP requests. This module could also be useful in 
         making API calls to web services you make use of in your application, such as Google Maps. 
        */
-      request.get('http://localhost:8080', function(error, response, body) {
+      request.get('http://localhost:3000', function(error, response, body) {
         /*
           The 'should' module is an assertion library. Assertions allow us to compare the functions
           that we are testing to the values we expect to receive back. 
@@ -63,26 +63,10 @@ describe('UF Directory Server Unit Tests', function() {
   });
 
 
-	// In these tests, we will be checking more specific content using object and primitive comparisons that have specific values.
-  describe('Server provides listing data as JSON on proper request', function() {
-    it('responds correctly to a GET request to "/listings"', function(done) {
-      request.get('http://localhost:8080/listings', function(error, response, body) {
-      	
-      	// First let's assert that the body being passed by the get request actually exists or not with our general assertions, similar to the previous test:
-       	should.exist(body)
-
-			// Next, use deepEquals() for object level comparison. We want to assert that the "listings" JSON provided by the get request is the same as the JSON file provided by the test (bodyData)
-			// Finally, call "done();" to move onto the next test
-        	bodyData = JSON.parse(body);
-          should.deepEqual(listings,bodyData);
-          done();
-        	
-      });
-    });
 
 	// For the last test, let's use make primitive value comparisons
     it('responds with a 404 error to other GET requests', function(done) {
-      request.get('http://localhost:8080/pizza', function(error, response, body) {
+      request.get('http://localhost:3000/pizza', function(error, response, body) {
       	// First, assert that the status code is what it's supposed to be (exactly 404) if the listing were missing.
        should.deepEqual(response.statusCode,404)
        should.equal(response.statusMessage, 'Not Found')        
@@ -94,4 +78,3 @@ describe('UF Directory Server Unit Tests', function() {
       });
     });
   });
-});

@@ -37,7 +37,6 @@ jobs:
           name: Start Server
           command: |
             cd server
-            sudo killall -9 node
             sudo npm start
           background: true
       - run: 
