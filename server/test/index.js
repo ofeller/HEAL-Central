@@ -1,11 +1,3 @@
-//let server = require("../index")
-let chai = require("chai");
-let chaiHttp = require("chai-http");
-
-//Assertion
-chai.should();
-chai.use(chaiHttp);
-
 const { assert } = require('console');
 var should = require('should'), 
     fs = require('fs'),
@@ -21,10 +13,6 @@ var listings;
  */
 describe('UF Directory Server Unit Tests', function() {
 
-  /*
-    This before hook loads the JSON data to the listings variable, so that we can compare 
-    the response to 'http://localhost:3000/listings' to the data we expect to recieve. 
-   */
 
   describe('Server responds to requests', function() {
     it('should respond', function(done) {
@@ -32,7 +20,7 @@ describe('UF Directory Server Unit Tests', function() {
         The request module allows us to make HTTP requests. This module could also be useful in 
         making API calls to web services you make use of in your application, such as Google Maps. 
        */
-      request.get('http://localhost:3001', function(error, response, body) {
+      request.get('http://localhost:3000', function(error, response, body) {
         /*
           The 'should' module is an assertion library. Assertions allow us to compare the functions
           that we are testing to the values we expect to receive back. 
@@ -55,7 +43,7 @@ describe('UF Directory Server Unit Tests', function() {
 
 	// For the last test, let's use make primitive value comparisons
     it('responds with a 404 error to other GET requests', function(done) {
-      request.get('http://localhost:3001/pizza', function(error, response, body) {
+      request.get('http://localhost:3000/pizza', function(error, response, body) {
       	// First, assert that the status code is what it's supposed to be (exactly 404) if the listing were missing.
        should.deepEqual(response.statusCode,404)
        should.equal(response.statusMessage, 'Not Found')        
