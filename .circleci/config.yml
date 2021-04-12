@@ -38,6 +38,7 @@ jobs:
           command: |
             ls
             cd server
+            npx kill-port 3001
             sudo npm start
           background: true
       - run: 
