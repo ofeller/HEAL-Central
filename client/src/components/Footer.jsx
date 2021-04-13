@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from 'react'
 import BackToTop from './BackToTop'
 import instagram from '../images/instagram_icon.png'
