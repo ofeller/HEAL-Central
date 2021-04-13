@@ -19,13 +19,11 @@ class About extends Component {
                             <div className="lg:px-32 xl:px-0 xl:ml-auto xl:float-right">
                                 <h3 className="font-bold text-black text-lg"> Leadership </h3>
                                 <div className="my-5 mr-4 xl:mt-5 xl:pr-8">
-                                    <p className=""> Lorem ipsum dolor sit amet,
-                                     consectetur adipiscing elit, sed do eiusmod tempor
-                                      incididunt ut labore et dolore magna aliqua. Ut enim 
-                                      ad minim veniam, quis nostrud exercitation ullamco laboris
-                                       nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                                       dolor in reprehenderit in voluptate velit esse cillum
-                                        dolore eu fugiat nulla pariatur.
+                                    <p className=""> As future leaders in the healthcare field one day, we recognize the importance of developing great leadership skills. 
+                                    To do so, we have several committees for our health panels and 5k runs. 
+                                    Most importantly, we have a wonderful leadership program called MEDIC which stands for Members Expanding and Developing Ideas in Collaboration, 
+                                    where MEDIC will be working alongside HEAL board members, learning how to plan for, prepare and execute events that cater to the pre-health community. 
+                                    MEDIC will also be helping and working with board members for large events.
                                     </p>
                                 </div>
                             </div>
@@ -36,13 +34,9 @@ class About extends Component {
                             <div className="lg:px-32 xl:px-0 text-center flex flex-col ml-auto text-left pl-8 xl:text-right">
                                 <h3 className="text-center font-bold text-black text-lg xl:text-right"> Pre-Health </h3>
                                 <div className="my-5 ml-4 xl:mt-5">
-                                    <p className=""> Lorem ipsum dolor sit amet,
-                                     consectetur adipiscing elit, sed do eiusmod tempor
-                                      incididunt ut labore et dolore magna aliqua. Ut enim 
-                                      ad minim veniam, quis nostrud exercitation ullamco laboris
-                                       nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                                       dolor in reprehenderit in voluptate velit esse cillum
-                                        dolore eu fugiat nulla pariatur.
+                                    <p className=""> 
+                                    HEAL upholds its pre-health pillar by holding a bi-yearly Health Panel in which Admission speakers and graduate students
+                                    speak with our members about the path to different health professional careers.
                                     </p>
                                 </div>
                             </div>
@@ -52,13 +46,8 @@ class About extends Component {
                             <div className="lg:px-32 xl:px-0 ml-auto xl:float-right">
                                 <h3 className="font-bold text-black text-lg"> Service </h3>
                                 <div className="my-5 mr-4 xl:mt-5 xl:pr-8">
-                                    <p className="">Lorem ipsum dolor sit amet,
-                                     consectetur adipiscing elit, sed do eiusmod tempor
-                                      incididunt ut labore et dolore magna aliqua. Ut enim 
-                                      ad minim veniam, quis nostrud exercitation ullamco laboris
-                                       nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                                       dolor in reprehenderit in voluptate velit esse cillum
-                                        dolore eu fugiat nulla pariatur.
+                                    <p className="">
+                                    As a pre health organization, we strongly believe in giving back to our community and we do so through a monthly service event where we volunteer anywhere from local nursing homes to volunteering for food banks and also take a weeklong expedition trip in spring semester!
                                     </p>
                                 </div>
                             </div>
@@ -68,13 +57,10 @@ class About extends Component {
                             <div className="lg:px-32 xl:px-0 flex flex-col ml-auto pl-8 xl:text-right">
                                 <h3 className="font-bold text-black text-lg"> Ohana </h3>
                                 <div className="my-5 ml-4 xl:mt-5">
-                                    <p className="">Lorem ipsum dolor sit amet,
-                                     consectetur adipiscing elit, sed do eiusmod tempor
-                                      incididunt ut labore et dolore magna aliqua. Ut enim 
-                                      ad minim veniam, quis nostrud exercitation ullamco laboris
-                                       nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                                       dolor in reprehenderit in voluptate velit esse cillum
-                                        dolore eu fugiat nulla pariatur.
+                                    <p className="pl-3">
+                                    If you’ve ever watched Lilo and Stitch, we based this pillar off of the iconic line 
+                                    “ohana means family and family means nobody gets left behind"—
+                                    We promote this pillar through our Big/Little Week and social events such as winter dinner, allowing our members to form a close knit community and succeed not just academically but also personally.
                                     </p>
                                 </div>
                             </div>
