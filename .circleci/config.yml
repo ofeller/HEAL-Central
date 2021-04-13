@@ -3,15 +3,43 @@ version: 2.1
 # Orchestrate or schedule a set of jobs
 jobs:
     build:
+      working_directory: ~/server
       docker:
         - image: circleci/node:current
-          
       steps:
-        - checkout
-          
-        - run: npm install
-        - run: npm install mocha
-        - run:
-            command: npm start
-            background: true
-        - run: npm test
+      - checkout
+      - run:
+          name: The First Step
+          command: |
+            echo 'Hello World!'
+            echo 'This is the delivery pipeline'
+      - run:
+          name: Installing Packages
+          command: |
+            ls -al
+            echo 'That should look familiar'
+            cd server
+            npm install
+            npm install mocha
+            npm install express
+            npm install cors
+            npm install chai
+            npm install chai-http
+            npm install mongoose
+            npm install request
+            npm i find-config
+            sudo npm install should  
+     # - run: 
+      #    name: Start Server
+       #   command: |
+        #    ls
+         #   cd server
+          #  sudo npm start
+         # background: true
+      - run: 
+          name: Run Server Tests
+          command: |
+            cd server
+            npm install
+            echo $MONGODB_URI
+            npm test
