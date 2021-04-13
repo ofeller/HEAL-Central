@@ -42,19 +42,4 @@ describe('UF Directory Server Unit Tests', function() {
       });
     });
   });
-
-
-	// For the last test, let's use make primitive value comparisons
-    it('responds with a 404 error to other GET requests', function(done) {
-      request.get('http://localhost:3000/pizza', function(error, response, body) {
-      	// First, assert that the status code is what it's supposed to be (exactly 404) if the listing were missing.
-       should.deepEqual(response.statusCode,404)
-       should.equal(response.statusMessage, 'Not Found')        
-        // For the last assertion, check that the string output is the same message server.js outputs when a listing is missing:
-        // Finally, call "done();" to finish!
-
-        done();        
-
-      });
-    });
-  });
+});
