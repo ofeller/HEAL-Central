@@ -17,11 +17,6 @@ var listings;
   They can be nested.
  */
 describe('UF Directory Server Unit Tests', function() {
-
-  /*
-    This before hook loads the JSON data to the listings variable, so that we can compare 
-    the response to 'http://localhost:3000/listings' to the data we expect to recieve. 
-   */
  
   describe('Server responds to requests', function() {
     it('should respond', function(done) {
@@ -38,10 +33,7 @@ describe('UF Directory Server Unit Tests', function() {
           
           In this unit test we are only testing the existence of a response, and are not concerned 
           with what is contained in the response. We can view this as a very general, binary check, not specific. 
-          
-          In first statement, assert what we should not see
-          In the second, assert what we should  see.
-          Finally, call "done();" to move on to the next test.
+
         */
         should.exist(response);
        done();
@@ -49,4 +41,18 @@ describe('UF Directory Server Unit Tests', function() {
       });
     });
   });
+
+  	// For this test, let's use make primitive value comparisons
+    it('responds with a 404 error to other GET requests', function(done) {
+      chai.request(app)
+      .get("/pizza")
+      .end(function(error, response) {
+      	// First, assert that the status code is what it's supposed to be (exactly 404) if the listing were missing.
+       should.deepEqual(response.statusCode,404)    
+        // For the last assertion, check that the string output is the same message server.js outputs when a listing is missing:
+        // Finally, call "done();" to finish!
+
+        done();
+    });
+  });  
 });
