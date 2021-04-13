@@ -14,7 +14,7 @@
   },
   "scripts": {
     "client-install": "npm install --prefix client",
-    "test": "mocha index-test.js --timeout 10000",
+    "test": "mocha index-test.js --exit --timeout 10000",
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "npm start --prefix client",
