@@ -19,7 +19,7 @@ jobs:
             ls -al
             echo 'That should look familiar'
             cd server
-             npm install
+            npm install
             npm install mocha
             npm install express
             npm install cors
@@ -27,14 +27,8 @@ jobs:
             npm install chai-http
             npm install mongoose
             npm install request
+            npm i find-config
             sudo npm install should  
-      #- run: npm install
-      #- run: npm install mocha
-      #- run:  npm install express
-      #- run:  npm install cors
-      #- run:  npm install chai
-      #- run:  npm install chai-http
-      #- run:  npm install mongoose
      # - run: 
       #    name: Start Server
        #   command: |

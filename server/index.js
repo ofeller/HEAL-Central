@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
-require('dotenv').config();
+require('dotenv').config({ path: require('find-config')('.env') })
 const db = require('./db')
 const attendeeRouter = require('./routes/attendee-router')
 
