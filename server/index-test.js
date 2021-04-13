@@ -1,6 +1,12 @@
 const { assert } = require('console');
 var should = require('should'), 
     request = require('request');
+    
+var chai = require('chai');
+var chaiHttp = require('chai-http');
+chai.use(chaiHttp);
+    
+const app = require("./index");
 
 /* Globals */
 var listings;
@@ -24,8 +30,9 @@ describe('UF Directory Server Unit Tests', function() {
         making API calls to web services you make use of in your application, such as Google Maps. 
        */
       console.log("here");
-      request.get('http://localhost:3000', function(error, response, body) {
-        console.log("over here");  
+      chai.request(app)
+      .get("/")
+      .end(function(error, response) {
       /*
           The 'should' module is an assertion library. Assertions allow us to compare the functions
           that we are testing to the values we expect to receive back. 
@@ -37,6 +44,7 @@ describe('UF Directory Server Unit Tests', function() {
           In the second, assert what we should  see.
           Finally, call "done();" to move on to the next test.
         */
+       console.log("over here");
         should.exist(response);
        done();
          
