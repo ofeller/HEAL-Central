@@ -86,7 +86,7 @@ class AttendeesInsert extends Component {
                     onChange={this.handleChangeInputEmail}
                 />
 
-                <input className="mt-2 border rounded transition duration-100 ease-in-out hover:bg-gray-300" type="submit" value="Submit"/>
+                <input className="cursor-pointer mt-2 border rounded transition duration-100 ease-in-out hover:bg-gray-300" type="submit" value="Submit"/>
             </form>
         )
     }
