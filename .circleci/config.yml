@@ -26,6 +26,8 @@ jobs:
             npm install chai
             npm install chai-http
             npm install mongoose
+            npm install request
+            sudo npm install should  
       #- run: npm install
       #- run: npm install mocha
       #- run:  npm install express
