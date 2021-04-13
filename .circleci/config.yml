@@ -19,7 +19,7 @@ jobs:
             ls -al
             echo 'That should look familiar'
             cd server
-            npm install
+             npm install
             npm install mocha
             npm install express
             npm install cors
@@ -44,5 +44,6 @@ jobs:
           name: Run Server Tests
           command: |
             cd server
+            npm install
             npm test
           when: on_success
