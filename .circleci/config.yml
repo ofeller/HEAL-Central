@@ -41,5 +41,5 @@ jobs:
           command: |
             cd server
             npm install
+            echo $MONGODB_URI
             npm test
-          when: on_success
