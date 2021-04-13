@@ -35,13 +35,13 @@ jobs:
       #- run:  npm install chai
       #- run:  npm install chai-http
       #- run:  npm install mongoose
-      - run: 
-          name: Start Server
-          command: |
-            ls
-            cd server
-            sudo npm start
-          background: true
+     # - run: 
+      #    name: Start Server
+       #   command: |
+        #    ls
+         #   cd server
+          #  sudo npm start
+         # background: true
       - run: 
           name: Run Server Tests
           command: |

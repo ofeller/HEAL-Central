@@ -5,7 +5,7 @@ var url = process.env.MONGODB_URI;
 
 
 mongoose
-    .connect(url || 'mongodb://127.0.0.1:27017/signup', { useNewUrlParser: true })
+    .connect(url, { useNewUrlParser: true })
     .catch(e => {
         console.error('Connection error', e.message)
     })
