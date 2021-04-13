@@ -29,7 +29,6 @@ describe('UF Directory Server Unit Tests', function() {
         The request module allows us to make HTTP requests. This module could also be useful in 
         making API calls to web services you make use of in your application, such as Google Maps. 
        */
-      console.log("here");
       chai.request(app)
       .get("/")
       .end(function(error, response) {
@@ -44,7 +43,6 @@ describe('UF Directory Server Unit Tests', function() {
           In the second, assert what we should  see.
           Finally, call "done();" to move on to the next test.
         */
-       console.log("over here");
         should.exist(response);
        done();
          
