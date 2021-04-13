@@ -29,9 +29,15 @@ class Home extends Component {
                     </div> 
                 </div>
                 <div className="text-center font-light text-lg my-10 mx-60">
-                HEAL is lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <p className="pb-4">
+                HEAL (Health Educated Asian Leaders) is an organization of students representing various health-related fields at the University of Florida. 
+                We are here to bring together students pursuing a career in medicine, pharmacy, dentistry, veterinary medicine, nursing, and physical and occupational therapy.
+                </p>
+                <p>
+                Our goal is to unite and build a network of diverse students with similar interests and career goals. Students are provided with the resources needed in order to be successful in furthering their professional ambitions. Through volunteer opportunities with various non-profit organizations, 
+                informational events with knowledgeable speakers, and educational meetings with icebreakers and after-socials, we include all aspects of the healthcare field and welcome every new member to join our Ohana!
+                </p>
+                
                     <div>
                         <Link to='/about'> 
                             <button className="mt-10 transition duration-150 ease-in-out bg-white hover:bg-peach border-8 border-black text-center text-3xl p-6 w-4/12 font-bold bg-transparent justify-center text-black font-bold py-2 px-2">
