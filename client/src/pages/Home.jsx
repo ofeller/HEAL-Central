@@ -40,7 +40,7 @@ class Home extends Component {
                 
                     <div>
                         <Link to='/about'> 
-                            <button className="mt-10 transition duration-150 ease-in-out bg-white hover:bg-peach border-8 border-black text-center text-3xl p-6 w-4/12 font-bold bg-transparent justify-center text-black font-bold py-2 px-2">
+                            <button className="mt-10 -mb-4 transition duration-150 ease-in-out bg-white hover:bg-peach border-8 border-black text-center text-3xl p-6 w-4/12 font-bold bg-transparent justify-center text-black font-bold py-2 px-2">
                                 LEARN MORE
                             </button>
                         </Link>
