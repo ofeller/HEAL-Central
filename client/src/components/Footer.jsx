@@ -13,7 +13,7 @@ class Footer extends Component {
                 <h2 className="font-light"> 
                 HEALTH EDUCATED ASIAN LEADERS | UNIVERSITY OF FLORIDA
                 </h2>
-                <h3 className="font-light m-4"> Stay Connected: </h3>
+                <h3 className="font-light mt-4 mb-2"> Stay Connected: </h3>
                 <div className="flex justify-center m-2">
                         <a href='https://www.instagram.com/ufheal/' target="_blank" rel="noreferrer"> 
                         <img src= {instagram} className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 m-auto w-8 h-8 my-1 mx-2"/>
