@@ -29,8 +29,8 @@ import image32 from '../images/image32.jpeg'
 class Gallery extends Component {
     render() {
         return (
-            <div className="xl:bg-gradient-to-l from-light-peach to-teal h-auto p-28">
-                <div className="mt-6 border-gray-800 text-gray-800 border-8 text-5xl text-center p-6 w-6/12 mb-8 m-auto font-bold">
+            <div className="md:bg-gradient-to-l from-light-peach to-teal h-auto p-28">
+                <div className="mt-6 mobile:border-transparent -9/12 xl:w-10/12 border-gray-800 text-gray-800 border-8 text-5xl text-center p-6 w-6/12 mb-8 m-auto font-bold">
                     <h2 className="italic tracking-wider"> GALLERY </h2>
                 </div>
                 <div className="grid grid-cols-4 gap-4 place-content-center -mx-24 -mb-16">

@@ -12,6 +12,9 @@ module.exports = {
         'peach':'#ffb9a7',
         'light-peach':'#ffe0cf',
         'mint-green':'#bae9d0'
+      },
+      screens: {
+        'mobile': {'max': '500px'}
       }
     },
     boxShadow: {
@@ -56,5 +59,6 @@ module.exports = {
     textColor: ['responsive', 'hover'],
     extend: {},
   },
+  
   plugins: [],
 }
