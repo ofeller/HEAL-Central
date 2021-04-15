@@ -116,8 +116,8 @@ class AttendeesList extends Component {
         }
 
         return (
-            <div className="pt-24 pb-4">
-            <h2 className="text-center font-light text-2xl">List of Attendees</h2>
+            <div className="pt-24 pb-4 m-8">
+            <h2 className="text-center font-light text-2xl mb-4">List of Attendees</h2>
                 {showTable && (
                     <ReactTable
                         data={attendees}
