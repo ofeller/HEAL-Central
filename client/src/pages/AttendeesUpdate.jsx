@@ -66,12 +66,12 @@ class AttendeesUpdate extends Component {
     render() {
         const { heal_event, first_name, last_name, email } = this.state
         return (
-            <div className="pt-24">
-                <h1>Edit Attendee</h1>
+            <div className="pt-24 ml-4">
+                <h1 className="font-bold">Edit Attendee</h1>
 
                 <h1>Event: </h1>
                 <input
-                    className="border rounded"
+                    className="border rounded mb-2"
                     type="text"
                     value={heal_event}
                     onChange={this.handleChangeInputHealEvent}
@@ -80,7 +80,7 @@ class AttendeesUpdate extends Component {
 
                 <h1>First Name: </h1>
                 <input
-                    className="border rounded"
+                    className="border rounded mb-2"
                     type="text"
                     value={first_name}
                     onChange={this.handleChangeInputFirstName}
@@ -88,24 +88,24 @@ class AttendeesUpdate extends Component {
 
                 <h1>Last Name: </h1>
                 <input
-                     className="border rounded"
+                     className="border rounded mb-2"
                     type="text"
                     value={last_name}
                     onChange={this.handleChangeInputLastName}
                 />
 
-                <label>Email: </label>
+                <h1>Email: </h1>
                 <input
-                    className="border rounded"
+                    className="border rounded mr-2"
                     type="text"
                     value={email}
                     onChange={this.handleChangeInputEmail}
                 />
 
 
-                
-                    <button onClick={this.handleUpdateAttendee} > Update Attendee</button>
-                    <a href={'/attendees/list'}>Cancel</a>
+                <div></div>
+                    <button className="border rounded p-2 bg-blue-300 hover:bg-blue-400 my-4 mr-4" onClick={this.handleUpdateAttendee} >Update </button>
+                    <a className="border rounded p-2 bg-red-300 hover:bg-red-400 mb-4" href={'/attendees/list'}> Cancel</a>
             </div>
         )
     }
