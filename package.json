@@ -17,8 +17,6 @@
         "heroku-postbuild": "cd client && rm -rf node_modules && npm install && npm run build"
     },
     "dependencies": {
-        "chai": "^4.3.4",
-        "chai-http": "^4.3.0",
         "cors": "^2.8.5",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
