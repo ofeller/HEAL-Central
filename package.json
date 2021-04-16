@@ -14,8 +14,8 @@
         "server": "cd server && nodemon server.js",
         "client": "cd client && npm start --prefix client",
         "dev": "concurrently \"npm run server\" \"npm run client\"",
-        "heroku-postbuild": "cd client && rm -rf node_modules && npm install && npm run build",
-        "build": "cd client && npm run build"
+        "heroku-postbuild": "cd client && npm install && npm run build",
+        "build": "cd client && npm install && npm run build"
     },
     "dependencies": {
         "cors": "^2.8.5",
