@@ -52,11 +52,11 @@ class AttendeesInsert extends Component {
         const { heal_event, first_name, last_name, email } = this.state
         return (
             <form className="flex flex-col m-auto w-5/12 pb-4" onSubmit={this.handleIncludeAttendee}>
-                <h2 className="text-center">Sign Up for an Event </h2>
+                <h2 className="text-center mb-2">Sign Up for an Event </h2>
 
-                <label>Event: </label>
+                <label>Enter the name of the event (as shown in the calendar): </label>
                 <input
-                    className="border rounded"
+                    className="border rounded pl-1 mb-2"
                     type="text"
                     value={heal_event}
                     onChange={this.handleChangeInputHealEvent}
@@ -64,7 +64,7 @@ class AttendeesInsert extends Component {
 
                 <label>First Name: </label>
                 <input
-                    className="border rounded"
+                    className="border rounded pl-1 mb-2"
                     type="text"
                     value={first_name}
                     onChange={this.handleChangeInputFirstName}
@@ -72,7 +72,7 @@ class AttendeesInsert extends Component {
 
                 <label>Last Name: </label>
                 <input
-                    className="border rounded"
+                    className="border rounded pl-1 mb-2"
                     type="text"
                     value={last_name}
                     onChange={this.handleChangeInputLastName}
@@ -80,7 +80,7 @@ class AttendeesInsert extends Component {
 
                 <label>Email: </label>
                 <input
-                    className="border rounded"
+                    className="border rounded pl-1 mb-2"
                     type="text"
                     value={email}
                     onChange={this.handleChangeInputEmail}
