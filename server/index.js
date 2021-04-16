@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors')
+const path = require('path')
 
 require('dotenv').config({ path: require('find-config')('.env') })
 const db = require('./db')
@@ -22,6 +23,13 @@ app.get('/', (req, res) => {
 
 app.use('/api', attendeeRouter)
 
+app.use('/', express.static('../client/build')).use(cors())
+app.use(express.static('../client/build')).use(cors())
+
+app.all('/*', (req, res) => {
+	// res.status(201).json({message: "nothing here!"});
+	res.sendFile(path.resolve("../client/build/index.html"));
+});
 
 app.listen(process.env.PORT || apiPort, () => console.log(`Server running on port ${apiPort}`))
 
