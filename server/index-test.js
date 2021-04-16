@@ -6,7 +6,7 @@ var chai = require('chai');
 var chaiHttp = require('chai-http');
 chai.use(chaiHttp);
     
-const app = require("./index");
+const app = require("./server");
 
 /* Globals */
 var listings;
