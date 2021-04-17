@@ -26,10 +26,10 @@ app.use('/api', attendeeRouter)
 app.use('/', express.static('../client/build')).use(cors())
 app.use(express.static('../client/build')).use(cors())
 
-app.all('/*', (req, res) => {
+app.get('*', (req, res) => {
 	// res.status(201).json({message: "nothing here!"});
 	res.sendFile(path.resolve("../client/build/index.html"));
-});
+});	
 
 app.listen(process.env.PORT || apiPort, () => console.log(`Server running on port ${apiPort}`))
 
