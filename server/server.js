@@ -16,15 +16,15 @@ app.use(express.json())
 
 //db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
+app.get('/', (req, res, next) => {
+	res.send('Hello World!')
+	next()
 })
-
-
-app.use('/api', attendeeRouter)
 
 app.use('/', express.static('../client/build')).use(cors())
 app.use(express.static('../client/build')).use(cors())
+
+app.use('/api', attendeeRouter)
 
 app.get('*', (req, res) => {
 	// res.status(201).json({message: "nothing here!"});
