@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-
 import { NavBar, Footer, ScrollToTop } from '../components'
-import { Home, About, Calendar, Gallery, ExecBoard, AttendeesInsert, AttendeesList, AttendeesUpdate } from '../pages'
+import { Home, About, Calendar, Gallery, ExecBoard, AttendeesInsert, AttendeesList, AttendeesUpdate, SignUp, Login} from '../pages'
 
 function App() {
   return (
@@ -18,6 +17,8 @@ function App() {
           <Route path="/attendees/list" exact component={AttendeesList}/>
           <Route path="/attendees/create" exact component={AttendeesInsert}/>
           <Route path="/attendees/update/:id" exact component={AttendeesUpdate}/>
+          <Route path="/signup" exact component={SignUp}/>
+          <Route path="/login" exact component={Login}/>
         </Switch>
         <Footer/>
     </Router>

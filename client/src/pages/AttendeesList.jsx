@@ -1,8 +1,17 @@
 import React, { Component } from 'react'
+import Userfront from "@userfront/react";
+
 import ReactTable from 'react-table-6'
 import api from '../api'
-
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    Redirect, // Be sure to add this import
+  } from "react-router-dom";
 import 'react-table-6/react-table.css'
+Userfront.init("vndgv7b7");
 
 class UpdateAttendee extends Component {
     updateUser = event => {
@@ -57,6 +66,7 @@ class AttendeesList extends Component {
     }
 
     render() {
+        
         const { attendees, isLoading } = this.state
         console.log('TCL: AttendeesList -> render -> attendees', attendees)
 
@@ -114,9 +124,24 @@ class AttendeesList extends Component {
         if (!attendees.length) {
             showTable = false
         }
-
-        return (
+        function renderFn({ location }) {
+            // If the user is not logged in, redirect to login
+            if (!Userfront.accessToken()) {
+            return (
+                <Redirect 
+                to={{
+                    pathname: "/login",
+                    state: {from: location },
+                }}
+                />
+            );
+            }
+            
+            const userData = JSON.stringify(Userfront.user, null, 2);
+            return (
             <div className="pt-24 pb-4 m-8">
+            <pre>{userData}</pre>
+                <button className="px-4 py-2 border border-blue-500 text-blue-500 font-light rounded" onClick={Userfront.logout}>Logout</button>
             <h2 className="text-center font-light text-2xl mb-4">List of Attendees</h2>
                 {showTable && (
                     <ReactTable
@@ -128,9 +153,13 @@ class AttendeesList extends Component {
                         minRows={0}
                     />
                 )}
+                
             </div>
-        )
+        );
+       
     }
+    return <Route render={renderFn} />;
+   
 }
-
+}
 export default AttendeesList
