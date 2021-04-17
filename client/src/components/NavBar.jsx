@@ -31,9 +31,6 @@ class NavBar extends Component {
                         <h1 className="hover:text-teal"> EXECUTIVE BOARD </h1>
                     </Link>
                         <h1 className="cursor-pointer hover:text-teal"> <ToBottom/> </h1> 
-                    <Link to='/attendees/list'> 
-                        <h1 className="hover:text-teal"> ATTENDEES LIST </h1>
-                    </Link>
 
                     <div className="flex items-center">
                         <a href='https://www.instagram.com/ufheal/' target="_blank"> 
