@@ -1,16 +1,10 @@
 import React, { Component } from 'react'
 import Userfront from "@userfront/react";
-
 import ReactTable from 'react-table-6'
 import api from '../api'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    Redirect, // Be sure to add this import
-  } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Redirect, } from "react-router-dom";
 import 'react-table-6/react-table.css'
+
 Userfront.init("vndgv7b7");
 
 class UpdateAttendee extends Component {
@@ -141,7 +135,12 @@ class AttendeesList extends Component {
             return (
             <div className="pt-24 pb-4 m-8">
             <pre>{userData}</pre>
-                <button className="px-4 py-2 border border-blue-500 text-blue-500 font-light rounded" onClick={Userfront.logout}>Logout</button>
+                <button className="px-4 py-2 border group hover:border-blue-500 hover:text-blue-500 font-light rounded" onClick={Userfront.logout}>Logout</button>
+                <Link to='/reset'> 
+                            <button className="px-4 py-2 border group hover:border-blue-500 hover:text-blue-500 font-light rounded">
+                                Reset Password
+                            </button>
+                        </Link>
             <h2 className="text-center font-light text-2xl mb-4">List of Attendees</h2>
                 {showTable && (
                     <ReactTable

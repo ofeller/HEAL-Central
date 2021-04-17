@@ -8,4 +8,5 @@ import AttendeesList from './AttendeesList'
 import AttendeesUpdate from './AttendeesUpdate'
 import SignUp from './SignUp'
 import Login from './Login'
-export { Home, About, Calendar, Gallery, ExecBoard, AttendeesInsert, AttendeesList, AttendeesUpdate, SignUp, Login }
+import Reset from './Reset'
+export { Home, About, Calendar, Gallery, ExecBoard, AttendeesInsert, AttendeesList, AttendeesUpdate, SignUp, Login, Reset }
