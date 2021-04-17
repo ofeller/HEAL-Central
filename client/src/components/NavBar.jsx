@@ -5,6 +5,7 @@ import logo from '../images/heal_logo.png'
 import instagram from '../images/instagram_icon.png'
 import facebook from '../images/facebook_icon.png'
 
+
 class NavBar extends Component {
     render() {
         return (
@@ -30,9 +31,6 @@ class NavBar extends Component {
                         <h1 className="hover:text-teal"> EXECUTIVE BOARD </h1>
                     </Link>
                         <h1 className="cursor-pointer hover:text-teal"> <ToBottom/> </h1> 
-                    <Link to='/attendees/list'> 
-                        <h1 className="hover:text-teal"> ATTENDEES LIST </h1>
-                    </Link>
 
                     <div className="flex items-center">
                         <a href='https://www.instagram.com/ufheal/' target="_blank"> 
@@ -42,6 +40,14 @@ class NavBar extends Component {
                         <a href='https://www.facebook.com/healatuf' target="_blank"> 
                         <img src= {facebook} className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 m-auto w-8 h-8 my-1 mx-2"/>
                         </a>
+                    </div>
+                    <div className="items-start">
+                    <Link to='/signup'> 
+                        <h1 className="hover:text-teal"> Sign Up </h1>
+                    </Link>
+                    <Link to='/login'> 
+                        <h1 className="hover:text-teal"> Login </h1>
+                    </Link>
                     </div>
                 </div>
             </div>

@@ -6,5 +6,6 @@ import ExecBoard from './ExecBoard'
 import AttendeesInsert from './AttendeesInsert'
 import AttendeesList from './AttendeesList'
 import AttendeesUpdate from './AttendeesUpdate'
-
-export { Home, About, Calendar, Gallery, ExecBoard, AttendeesInsert, AttendeesList, AttendeesUpdate }
+import SignUp from './SignUp'
+import Login from './Login'
+export { Home, About, Calendar, Gallery, ExecBoard, AttendeesInsert, AttendeesList, AttendeesUpdate, SignUp, Login }
