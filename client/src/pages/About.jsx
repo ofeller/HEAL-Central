@@ -54,7 +54,7 @@ class About extends Component {
                                     </p>
                                 </div>
                             </div>
-                            <img src={service} alt="service" className="transform scale-110  mobile:scale-150 border-2 border-gray-800 w-4/12 xl:w-56 m-auto"/>
+                            <img src={service} alt="service" className="transform scale-110 mobile:scale-x-150 border-2 border-gray-800 w-4/12 xl:w-56 m-auto"/>
                         </div>
                         <div className="flex flex-col text-center xl:flex xl:flex-row-reverse mt-20 px-20">
                             <div className="lg:px-32 xl:px-0 flex flex-col ml-auto pl-8 xl:text-right">
