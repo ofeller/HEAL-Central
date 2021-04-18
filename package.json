@@ -15,7 +15,7 @@
         "client": "cd client && npm start --prefix client",
         "dev": "concurrently \"npm run server\" \"npm run client\"",
         "heroku-postbuild": "cd client && npm install && npm run build",
-        "build": "cd client && npm install && npm run build"
+        "build": "cd client && npm install && npm install tailwindcss@npm:@tailwindcss/postcss7-compat @tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9 && npm run build"
     },
     "dependencies": {
         "cors": "^2.8.5",
