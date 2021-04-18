@@ -18,7 +18,7 @@ class About extends Component {
                         <div className="flex flex-col text-center xl:text-left xl:flex xl:flex-row mt-20 px-20">
                             <div className="lg:px-32 xl:px-0 xl:ml-auto xl:float-right">
                                 <h3 className="font-bold text-gray-800 text-2xl"> Leadership </h3>
-                                <div className="my-5 mr-4 xl:mt-5 xl:pr-8">
+                                <div className="my-5 mr-4 xl:mt-5 xl:pr-8 mobile:-mx-20">
                                     <p className="font-light pb-5"> As future leaders in the healthcare field one day, we recognize the importance of developing great leadership skills. 
                                     To do so, we have several committees for our health panels and 5k runs. 
                                     Most importantly, we have a wonderful leadership program called MEDIC which stands for Members Expanding and Developing Ideas in Collaboration, 
@@ -27,25 +27,25 @@ class About extends Component {
                                     </p>
                                 </div>
                             </div>
-                                <img src={leadership} alt="leadership" className="transform scale-110 border-2 border-gray-800 m-auto w-96 xl:h-64"/>
+                                <img src={leadership} alt="leadership" className="transform scale-110 mobile:scale-150 border-2 border-gray-800 m-auto w-96 xl:h-64"/>
                         </div>
                         
                         <div className="flex flex-col xl:flex xl:flex-row-reverse mt-20 px-20">
                             <div className="lg:px-32 xl:px-0 text-center flex flex-col ml-auto text-left pl-8 xl:text-right">
                                 <h3 className="text-center font-bold text-gray-800  text-2xl xl:text-right"> Pre-Health </h3>
-                                <div className="my-5 ml-10 xl:mt-5">
+                                <div className="my-5 ml-10 xl:mt-5 mobile:-mx-20">
                                     <p className=""> 
                                     HEAL upholds its pre-health pillar by holding a bi-yearly Health Panel in which Admission speakers and graduate students
                                     speak with our members about the path to different health professional careers.
                                     </p>
                                 </div>
                             </div>
-                            <img src={prehealth} alt="prehealth" className="transform scale-110 border-2 border-gray-800 m-auto w-96 xl:h-64 xl:float-left"/>
+                            <img src={prehealth} alt="prehealth" className="transform scale-110 mobile:scale-125 border-2 border-gray-800 m-auto w-96 xl:h-64 xl:float-left"/>
                         </div>
                         <div className="flex flex-col text-center xl:text-left xl:flex xl:flex-row mt-20 px-20">
                             <div className="lg:px-32 xl:px-0 ml-auto xl:float-right">
                                 <h3 className="font-bold text-gray-800  text-2xl"> Service </h3>
-                                <div className="my-5 mr-4 xl:mt-5 xl:pr-8">
+                                <div className="my-5 mr-4 xl:mt-5 xl:pr-8 mobile:-mx-20">
                                     <p className="pb-5">
                                     As a pre health organization, we strongly believe in giving back to our community 
                                     and we do so through a monthly service event where we volunteer anywhere from 
@@ -54,12 +54,12 @@ class About extends Component {
                                     </p>
                                 </div>
                             </div>
-                            <img src={service} alt="service" className="transform scale-110 border-2 border-gray-800 w-4/12 xl:w-56 m-auto"/>
+                            <img src={service} alt="service" className="transform scale-110  mobile:scale-150 border-2 border-gray-800 w-4/12 xl:w-56 m-auto"/>
                         </div>
                         <div className="flex flex-col text-center xl:flex xl:flex-row-reverse mt-20 px-20">
                             <div className="lg:px-32 xl:px-0 flex flex-col ml-auto pl-8 xl:text-right">
                                 <h3 className="font-bold text-gray-800 text-2xl"> Ohana </h3>
-                                <div className="my-5 ml-4 xl:mt-5">
+                                <div className="my-5 ml-4 xl:mt-5 mobile:-mx-20">
                                     <p className="pl-3 pb-5">
                                     If you’ve ever watched Lilo and Stitch, we based this pillar off of the iconic line 
                                     “ohana means family and family means nobody gets left behind"—
@@ -67,7 +67,7 @@ class About extends Component {
                                     </p>
                                 </div>
                             </div>
-                            <img src={ohana} alt="Service" className="transform scale-110 border-2 border-gray-800 w-96 m-auto xl:h-64"/>
+                            <img src={ohana} alt="Service" className="transform scale-110 mobile:scale-150 border-2 border-gray-800 w-96 m-auto xl:h-64"/>
                         </div>
                     </div>
                 </div>

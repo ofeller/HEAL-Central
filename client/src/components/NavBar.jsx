@@ -15,7 +15,7 @@ class NavBar extends Component {
             if (!Userfront.accessToken()) {
         return (
             <React.Fragment>
-            <div className="font-light z-50 fixed bg-white m-auto w-full">
+            <div className="font-light z-50 fixed bg-white m-auto w-full mobile:pb-10">
                 <div className="flex flex-wrap justify-around items-center h-20">
                     <Link to='/'>
                         <img src={logo} className="m-auto w-20 h-15 my-1" alt="HEAL Logo"/>
