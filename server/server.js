@@ -15,20 +15,20 @@ app.use(express.json())
 
 
 //db.on('error', console.error.bind(console, 'MongoDB connection error:'))
+app.use('/', express.static(path.join(__dirname, '../client/build')))
+app.use(express.static(path.join(__dirname, '../client/build')))
 
 app.get('/', (req, res, next) => {
 	res.send('Hello World!')
 	next()
 })
 
-app.use('/', express.static('../client/build')).use(cors())
-app.use(express.static('../client/build')).use(cors())
 
 app.use('/api', attendeeRouter)
 
 app.get('*', (req, res) => {
 	// res.status(201).json({message: "nothing here!"});
-	res.sendFile(path.resolve("../client/build/index.html"));
+	res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
 });	
 
 app.listen(process.env.PORT || apiPort, () => console.log(`Server running on port ${apiPort}`))
