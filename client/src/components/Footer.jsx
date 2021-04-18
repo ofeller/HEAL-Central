@@ -27,7 +27,7 @@ class Footer extends Component {
                         <img src= {mail} className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 m-auto w-8 h-8 my-1 mx-2"/>
                         </a>
                     </div>
-                    <h2 className="mb-4">secretary.heal@gmail.com</h2>
+                    <h2 className="mb-4 font-light">secretary.heal@gmail.com</h2>
                 <BackToTop/>
             </div>
             </React.Fragment>

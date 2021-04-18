@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import leadership from "../images/leadership.png";
-import profilePic from "../images/profile-icon.png";
+//import leadership from "../images/leadership.png";
+//import profilePic from "../images/profile-icon.png";
 
 class ExecBoard extends Component {
   render() {
