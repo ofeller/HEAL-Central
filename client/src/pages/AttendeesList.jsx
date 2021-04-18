@@ -133,7 +133,7 @@ class AttendeesList extends Component {
             
             const userData = JSON.stringify(Userfront.user, null, 2);
             return (
-            <div className="pt-24 pb-4 m-8">
+            <div className="pt-24 pb-4">
             <pre>{userData}</pre>
                 <button className="px-4 py-2 border group hover:border-blue-500 hover:text-blue-500 font-light rounded" onClick={Userfront.logout}>Logout</button>
                 <Link to='/reset'> 
