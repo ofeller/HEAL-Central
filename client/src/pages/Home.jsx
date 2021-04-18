@@ -16,7 +16,7 @@ class Home extends Component {
             <div>
                 <div className="bg-white h-20"></div>
                 <div className="bg-banner bg-cover bg-top p-24 bg-fixed">
-                    <div className="bg-teal bg-opacity-90 text-white text-center">
+                    <div className="bg-teal bg-opacity-90 text-white text-center mobile:w-64">
                         <div className="mobile:text-8xl text-10xl tracking-widest font-medium -mb-10">
                             HEAL
                         </div>
@@ -28,7 +28,7 @@ class Home extends Component {
                         </div>
                     </div> 
                 </div>
-                <div className="mobile:-mx-2 text-center font-light text-lg my-10 mx-60">
+                <div className="mobile:-mx-1 text-center font-light text-lg my-10 mx-60">
                 <p className="pb-4">
                 HEAL (Health Educated Asian Leaders) is an organization of students representing various health-related fields at the University of Florida. 
                 We are here to bring together students pursuing a career in medicine, pharmacy, dentistry, veterinary medicine, nursing, and physical and occupational therapy.
