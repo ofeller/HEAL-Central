@@ -30,41 +30,41 @@ class Gallery extends Component {
     render() {
         return (
             <div className="md:bg-gradient-to-l from-light-peach to-teal h-auto p-28">
-                <div className="mt-6 mobile:border-transparent -9/12 xl:w-10/12 border-gray-800 text-gray-800 border-8 text-5xl text-center p-6 w-6/12 mb-8 m-auto font-bold">
+                <div className="mt-6 mobile:border-transparent -9/12 xl:w-10/12 border-gray-800 text-gray-800 border-8 text-5xl text-center p-6 w-6/12 mb-8 m-auto font-bold mobile:-ml-14">
                     <h2 className="italic tracking-wider"> GALLERY </h2>
                 </div>
-                <div className="grid grid-cols-4 gap-4 place-content-center -mx-24 -mb-16">
+                <div className="grid grid-cols-4 gap-4 mobile:gap-2 mobile:grid-cols-2 place-content-center -mx-24 -mb-16">
                         <div>
-                            <img src={image31} className="hover:shadow border-2 border-gray-800 my-4"/>
-                            <img src={image32} className="hover:shadow border-2 border-gray-800 my-4"/>
-                            <img src={image26} className="hover:shadow border-2 border-gray-800 my-4"/>
-                            <img src={image24} className="hover:shadow border-2 border-gray-800 my-4"/>
-                            <img src={image17} className="hover:shadow border-2 border-gray-800 my-4"/>
-                            <img src={image23} className="hover:shadow border-2 border-gray-800 my-4"/>
+                            <img src={image31} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
+                            <img src={image32} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
+                            <img src={image26} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
+                            <img src={image24} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
+                            <img src={image17} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
+                            <img src={image23} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
                         </div>
 
                         <div>
-                            <img src={image14} className="hover:shadow border-2 border-gray-800 my-4"/>
-                            <img src={image13} className="hover:shadow border-2 border-gray-800 my-4"/>
-                            <img src={image28} className="hover:shadow border-2 border-gray-800 my-4"/>
-                            <img src={image8} className="hover:shadow border-2 border-gray-800 my-4"/>
-                            <img src={image16} className="hover:shadow border-2 border-gray-800 my-4"/>
-                            <img src={image20} className="hover:shadow border-2 border-gray-800 my-4"/>
+                            <img src={image14} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
+                            <img src={image13} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
+                            <img src={image28} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
+                            <img src={image8} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
+                            <img src={image16} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
+                            <img src={image20} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
                         </div>
 
                         <div>
-                            <img src={image19} className="hover:shadow border-2 border-gray-800 my-4"/>
-                            <img src={image29} className="hover:shadow border-2 border-gray-800 my-4"/>
-                            <img src={image22} className="hover:shadow border-2 border-gray-800 my-4"/>
-                            <img src={image25} className="hover:shadow border-2 border-gray-800 my-4"/>
-                            <img src={image1} className="hover:shadow border-2 border-gray-800 my-4"/>
+                            <img src={image19} className="hover:shadow border-2 border-gray-800 mobile:my-2 mobile:-mt-10 my-4"/>
+                            <img src={image29} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
+                            <img src={image22} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
+                            <img src={image25} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
+                            <img src={image1} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
                         </div>
                         <div>
-                            <img src={image15} className="hover:shadow border-2 border-gray-800 my-4"/>
-                            <img src={image18} className="hover:shadow border-2 border-gray-800 my-4"/>
-                            <img src={image4} className="hover:shadow border-2 border-gray-800 my-4"/>
-                            <img src={image21} className="hover:shadow border-2 border-gray-800 my-4"/>
-                            <img src={image30} className="hover:shadow border-2 border-gray-800 my-4"/>
+                            <img src={image15} className="hover:shadow border-2 border-gray-800 mobile:my-2 mobile:-mt-2 my-4"/>
+                            <img src={image18} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
+                            <img src={image4} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
+                            <img src={image21} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
+                            <img src={image30} className="hover:shadow border-2 border-gray-800 mobile:my-2 my-4"/>
                         </div>
                         
                 </div>
