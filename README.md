@@ -1,26 +1,16 @@
-# Introduction to Test Driven Development
-In this assignment we will build tests for a directory application. All code except the tests have been written for you.
-## Assignment
-Your objective is to write tests that assert the outputs from a server which provides listing data from a JSON file. To accomplish this, you will:
-- Use tests covered in discussion presentation to build informative tests
-- Start the server
-- Check that tests are running properly
+Overall, this was designed to be a static and informational website, with the most dynamic features being the calendar and the event signup. Those have been designed to be maintainable on their own without consistent maintenance, so the main thing that will need to be updated regularly is content such as the executive board and gallery page in order to keep the website relevant to HEAL’s current status.
 
-We have provided skeleton code that will help guide you in completing this assignment. The server has already been written for you in server.js, you will write the tests in server.test.js
+How to run locally from GitHub in terminal (first time)
+1.	Type “mkdir HEAL-Central” to create a new folder
+2.	Use “cd HEAL-Central” to navigate to that folder
+3.	Type “git clone https://github.com/ofeller/HEAL-Central.git”
+4.	Enter the following three commands in order: “cd client”, “npm install”, and “npm run start”. If you are on a Mac or Linux (Ubuntu), run “npm run start-mac” instead of “npm run start”. A server should launch, and you will be taken to the website’s frontend. If the server does not launch, go to http://localhost:8000/ in your browser.
+5.	Open a new terminal window (while still leaving the first one open).
+6.	In the new window, use cd to navigate to the directory you made.
+7.	Enter the following three commands in order: “cd server”, “npm install”, “npx nodemon”. Another server should launch, responsible for the site’s backend
+8.	You should now be able to run the site on your local server!
 
-The point of this assignment is to learn about tests and their relationship to functionality of your code. The only code you will need to write are the assertions and any code needed to move between tests.
-# Instructions: 
-
-1. Make sure you have [Node.js](https://nodejs.org/en/) installed
-2. Download Zip file
-3. Install the mocha testing framework with the command `npm install -g mocha`
-4. Use `npm install` to download all necessary dependencies
-5. Start your server with `npm start` 
-6. Implement the tests by filling in code blocks found in server.test.js, then test your implementation with the command mocha server.test.js. (make sure your server is running before trying to run the tests!)
-7. Push code to your project GitHub and submit link to this assignment.
-
-Please push your code with tests to GitHub and submit the link.
-
-
-
-
+How to run locally from GitHub (after the first time)
+1.	Use cd to navigate to the directory you created when first cloning the GitHub
+2.	Enter the command “git pull” to update your local directory
+3.	Follow steps 4-7 of the first section.
