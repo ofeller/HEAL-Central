@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import api from '../api'
-import { Link } from 'react-router-dom'
 
 class AttendeesUpdate extends Component {
     constructor(props) {
