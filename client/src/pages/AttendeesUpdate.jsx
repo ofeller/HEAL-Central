@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import api from '../api'
+import { Link } from 'react-router-dom'
 
 class AttendeesUpdate extends Component {
     constructor(props) {
@@ -64,9 +65,9 @@ class AttendeesUpdate extends Component {
     render() {
         const { heal_event, first_name, last_name, email } = this.state
         return (
-            <div className="pt-24 ml-4">
+            <div className="pt-24 block text-center">
                 <h1 className="font-bold">Edit Attendee</h1>
-
+                <form className="inline-block mx-auto text-left">
                 <h1>Event: </h1>
                 <input
                     className="border rounded mb-2"
@@ -103,7 +104,8 @@ class AttendeesUpdate extends Component {
 
                 <div></div>
                     <button className="border rounded p-2 bg-blue-300 hover:bg-blue-400 my-4 mr-4" onClick={this.handleUpdateAttendee} >Update </button>
-                    <a className="border rounded p-2 bg-red-300 hover:bg-red-400 mb-4" href={'/attendees/list'}> Cancel</a>
+                    <a className="border rounded p-2 bg-red-300 hover:bg-red-400 mb-4" href={'/attendees/list'}> Back </a>
+                    </form>
             </div>
         )
     }
