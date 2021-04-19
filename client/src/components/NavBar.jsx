@@ -47,11 +47,11 @@ class NavBar extends Component {
                         </a>
                     </div>
                     <div className="items-start">
-                    <Link to='/signup'> 
+                    {/* <Link to='/signup'> 
                         <h1 className="hover:text-teal"> Sign Up </h1>
-                    </Link>
+                    </Link> */}
                     <Link to='/login'> 
-                        <h1 className="hover:text-teal"> Login </h1>
+                        <h1 className="hover:text-teal"> LOGIN </h1>
                     </Link>
                     </div>
                 </div>
