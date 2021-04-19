@@ -66,8 +66,8 @@ class AttendeesList extends Component {
 
         const columns = [
             {
-                Header: 'ID',
-                accessor: '_id',
+                Header: 'Date Updated',
+                accessor: 'updatedAt',
                 filterable: true,
             },
             {
