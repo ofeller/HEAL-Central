@@ -4,15 +4,17 @@ const express = require('express')
 const cors = require('cors')
 const path = require('path')
 
+if(process.env.NODE_ENV != 'production'){
 require('dotenv').config({ path: require('find-config')('.env') })
+}
 const db = require('./db')
 const attendeeRouter = require('./routes/attendee-router')
 
 const app = express()
-const apiPort = 3000
+const apiPort = 3001
 
 app.use(express.urlencoded({ extended: true }))
-app.use(cors())
+app.use(cors({origin: true, credentials: true}))
 app.use(express.json())
 
 
