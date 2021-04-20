@@ -1,7 +1,8 @@
 import axios from 'axios'
+//var baseUrl = process.env.baseURL || "http://localhost:3001/api"
 
 const api = axios.create({
-    baseURL: 'http://localhost:3000/api',
+    baseURL: 'https://ufheal.herokuapp.com/api',
 })
 
 export const insertAttendee = payload => api.post(`/attendee`, payload)
