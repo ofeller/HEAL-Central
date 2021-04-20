@@ -1,3 +1,5 @@
+//Attendees router code and React front end references this article https://medium.com/swlh/how-to-create-your-first-mern-mongodb-express-js-react-js-and-node-js-stack-7e8b20463e66
+//Authentication implemented with this tutorial https://davidwalsh.name/react-authentication-2
 const express = require('express')
 const cors = require('cors')
 const path = require('path')
